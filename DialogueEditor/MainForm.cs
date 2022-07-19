@@ -94,7 +94,7 @@ namespace DialogueEditor
         private Sentence[] ConvertFromRaw(StreamReader sr)
         {
             List<Sentence> result = new List<Sentence>();
-            Regex nameRegex = new Regex("^(\\S+) - ");
+            Regex nameRegex = new Regex("^((\\S+\\s?){0,10})- ");
             bool encounterNewName = true;
             string line, name, txt;
             string? prevLine;
